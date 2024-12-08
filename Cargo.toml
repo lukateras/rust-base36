@@ -1,7 +1,13 @@
 [package]
 name = "base36"
-edition = "2021"
 version = "0.0.0"
+authors = ["Luka Teras <luka@sdf.org>"]
+license = "BSD-2-Clause-Patent"
+description = "Base36 encoder/decoder"
+categories = ["encoding"]
+keywords = ["base36", "encode", "decode"]
+edition = "2021"
+exclude = [".gitignore"]
 
 [dependencies]
 num-bigint = "0.4.2"
