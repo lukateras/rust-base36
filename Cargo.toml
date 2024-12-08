@@ -2,12 +2,12 @@
 name = "base36"
 version = "0.0.0"
 authors = ["Luka Teras <luka@sdf.org>"]
-license = "BSD-2-Clause-Patent"
-readme = "README.md"
-repository = "https://github.com/lukateras/rust-base36"
 description = "Base36 encoder/decoder"
-categories = ["encoding"]
+readme = "README.md"
+license = "BSD-2-Clause-Patent"
+repository = "https://github.com/lukateras/rust-base36"
 keywords = ["base36", "encode", "decode"]
+categories = ["encoding"]
 edition = "2021"
 exclude = [".gitignore"]
 
