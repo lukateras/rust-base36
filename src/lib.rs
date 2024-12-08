@@ -24,13 +24,21 @@ pub fn encode(buf: &[u8]) -> String {
 mod tests {
     use super::*;
 
+    const HELLO_WORLD: &[u8] = b"Hello, World!";
+    const HELLO_WORLD_BASE36: &str = "fg3h7vqw7een6jwwnzmp";
+
     #[test]
     fn test_decode() {
-        assert_eq!(decode("fg3h7vqw7een6jwwnzmp").unwrap(), b"Hello, World!");
+        assert_eq!(decode(&HELLO_WORLD_BASE36).unwrap(), HELLO_WORLD);
+    }
+
+    #[test]
+    fn test_decode_uppercase() {
+        assert_eq!(decode(&HELLO_WORLD_BASE36.to_uppercase()).unwrap(), HELLO_WORLD);
     }
 
     #[test]
     fn test_encode() {
-        assert_eq!(encode(b"Hello, World!"), "fg3h7vqw7een6jwwnzmp");
+        assert_eq!(encode(HELLO_WORLD), HELLO_WORLD_BASE36);
     }
 }
