@@ -1,13 +1,14 @@
-use failure::*;
+use num_bigint::{BigUint, ParseBigIntError};
+use num_traits::Num;
 
-const ALPHABET: &[u8] = b"0123456789abcdefghijklmnoqprstuvwxyz";
+const RADIX: u32 = 36;
 
-pub fn decode(s: &str) -> Fallible<Vec<u8>> {
-    base_x::decode(ALPHABET, s).map_err(|e| e.into())
+pub fn decode(s: &str) -> Result<Vec<u8>, ParseBigIntError> {
+    Ok(BigUint::from_str_radix(s, RADIX)?.to_bytes_be())
 }
 
 pub fn encode(buf: &[u8]) -> String {
-    base_x::encode(ALPHABET, buf)
+    BigUint::from_bytes_be(buf).to_str_radix(RADIX)
 }
 
 #[cfg(test)]
@@ -16,11 +17,11 @@ mod tests {
 
     #[test]
     fn test_decode() {
-        assert_eq!(decode("fg3h7vpw7een6jwwnzmq").unwrap(), b"Hello, World!");
+        assert_eq!(decode("fg3h7vqw7een6jwwnzmp").unwrap(), b"Hello, World!");
     }
 
     #[test]
     fn test_encode() {
-        assert_eq!(encode(b"Hello, World!"), "fg3h7vpw7een6jwwnzmq");
+        assert_eq!(encode(b"Hello, World!"), "fg3h7vqw7een6jwwnzmp");
     }
 }

@@ -4,5 +4,5 @@ edition = "2021"
 version = "0.0.0"
 
 [dependencies]
-base-x = "0.2.0"
-failure = "0.1.5"
+num-bigint = "0.4.2"
+num-traits = "0.2.11"
