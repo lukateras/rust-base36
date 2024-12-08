@@ -4,6 +4,7 @@ version = "0.0.0"
 authors = ["Luka Teras <luka@sdf.org>"]
 license = "BSD-2-Clause-Patent"
 readme = "README.md"
+repository = "https://github.com/lukateras/rust-base36"
 description = "Base36 encoder/decoder"
 categories = ["encoding"]
 keywords = ["base36", "encode", "decode"]
