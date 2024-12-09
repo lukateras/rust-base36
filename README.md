@@ -12,7 +12,7 @@ Add the crate to your project's `Cargo.toml`:
 base36 = "1"
 ```
 
-You are ready to go:
+You are all set:
 
 ```rust
 fn main() {
