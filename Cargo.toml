@@ -9,7 +9,7 @@ repository = "https://github.com/lukateras/rust-base36"
 keywords = ["base36", "encode", "decode"]
 categories = ["encoding"]
 edition = "2021"
-exclude = [".gitignore"]
+exclude = [".github", ".gitignore"]
 
 [dependencies]
 num-bigint = "0.4.2"
