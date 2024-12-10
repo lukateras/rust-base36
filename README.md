@@ -4,6 +4,8 @@ Base36 encoder/decoder for Rust. See: <https://en.wikipedia.org/wiki/Base36>
 
 Base36 is the most compact regular encoding that is valid in domain names.
 
+## [Documentation](https://lukateras.github.io/rust-base36/base36/)
+
 ## Usage
 
 Add the crate to your project's `Cargo.toml`:
