@@ -44,7 +44,7 @@ mod tests {
     }
 
     #[test]
-    fn test_decode_nul() {
+    fn test_decode_null() {
         assert_eq!(decode("0").unwrap(), b"\0");
     }
 
@@ -59,7 +59,7 @@ mod tests {
     }
 
     #[test]
-    fn test_encode_nul() {
+    fn test_encode_null() {
         assert_eq!(encode(b"\0"), "0");
     }
 }
