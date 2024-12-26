@@ -1,6 +1,6 @@
 [package]
 name = "base36"
-version = "1.0.0"
+version = "1.0.1"
 authors = ["Luka Teras <luka@sdf.org>"]
 edition = "2021"
 description = "Base36 encoder/decoder"
