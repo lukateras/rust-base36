@@ -26,4 +26,7 @@ $ cargo run
 jvqhhz7lkzl
 ```
 
-## [Documentation](https://lukateras.github.io/rust-base36/base36/)
+## Documentation
+
+See the documentation for the latest revision:
+<https://lukateras.github.io/rust-base36/base36/>
