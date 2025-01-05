@@ -5,12 +5,12 @@ use num_traits::Num;
 
 const RADIX: u32 = 36;
 
-/// Error during `decode`.
+/// Error during [`decode`](fn.decode.html).
 pub type DecodeError = ParseBigIntError;
 
 /// Decodes a Base36 string into a byte array.
 ///
-/// Returns `DecodeError` if the string is not Base36.
+/// Returns [`DecodeError`](type.DecodeError.html) if the string is not Base36.
 pub fn decode(s: &str) -> Result<Vec<u8>, DecodeError> {
     Ok(BigUint::from_str_radix(s, RADIX)?.to_bytes_be())
 }
